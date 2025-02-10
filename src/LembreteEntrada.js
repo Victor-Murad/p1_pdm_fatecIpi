@@ -21,16 +21,16 @@ export default class LembreteEntrada extends Component {
 
     render() {
         return (
-        <form onSubmit={this.onFormSubmit}>
-            <div className='container'>
-                <div className='row d-flex align-items-center'>
-                    <input type='text' className='col-12 text-center form-control mt-2'
-                    placeholder='Digite seu lembrete' onChange={this.onTermoAlterado}
-                    value={this.state.lembrete} />
-                    <button className='btn btn-outline-primary w-100 mt-2'>Cadastrar</button>
+            <form onSubmit={this.onFormSubmit} className='mb-4'>
+                <div className='input-group shadow-sm'>
+                    <input type='text' className='form-control form-control-lg'
+                    placeholder='Digite um lembrete...' value={this.state.lembrete}
+                    onChange={this.onTermoAlterado} />
+                    <button className='btn btn-primary btn-lg' type='submit'>
+                        Adicionar
+                    </button>
                 </div>
-            </div>
-        </form>
+            </form>
         )
     }
 }

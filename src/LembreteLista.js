@@ -2,16 +2,14 @@ import React from 'react'
 
 const LembreteLista = ({lista}) => {
     return(
-        <div className='container'>
-            <div className='row text-center rounded p-4'>
+        <ul className='list-group shadow'>
                 {lista.map((lembrete, index) => (
-                    <div className='col-12 border border-primary mt-2 py-4 rounded' key={index}
-                    style={{wordBreak: 'break-word', width:'100%'}}>
+                    <li key={index} className='list-group-item list-group-item-action
+                    d-flex justify-content-between align-items-center' style={{wordBreak:'break-word'}}>
                         {lembrete}
-                    </div>
+                    </li>
                 ))}
-            </div>
-        </div>
+        </ul>
     )
 }
 

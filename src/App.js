@@ -16,16 +16,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className='container border border-success mt-2 py-5'>
-          <div className='d-flex justify-contet-center'>
-            <h1>Lembretes</h1>
-          </div>
-          <div className='col-12 border border-info py-5'>
-            <LembreteLista lista={this.state.listaLembretes} />
-          </div>
-          <div className='col-12 border border-danger mt-2 p-4'>
+      <div className='container p-5'>
+        <div className='row justify-content-center'>
+          <div className='col-sm-12 col-md-8 col-lg-6'>
+            <h1 className='text-center mb-4'>Lista de Lembretes</h1>
             <LembreteEntrada adicionarLembrete={this.adicionarLembrete} />
+            <LembreteLista lista={this.state.listaLembretes} />
           </div>
         </div>
       </div>
